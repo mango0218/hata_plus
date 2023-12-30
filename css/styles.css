@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 960px;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top {
+    background-color: #1f1f56;
+}
+
+.menu ul {
+    display: flex;
+    column-gap: 25px;
+}
+
+.menu a {
+    color: #b1b1d2;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Arial";
+}
+
+.menu a:hover {
+    color: #fd8300;
+}
+
+.socials ul {
+    display: flex;
+    column-gap: 25px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.phones a {
+    margin-left: 11px;
+    color: #25252c;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Arial";
+    text-decoration: none;
+}
+
+.phones a:hover {
+    color: #666666;
+}
+
+a.tel {
+    margin-left: 28px;
+}
+
+.mail a {
+    margin-left: 11px;
+    color: #25252c;
+    font-family: "Arial";
+}
+
+.mail a:hover {
+    color: #fd8300;
+}
+
+.button a {
+    color: #25252c;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Arial";
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px;
+    min-width: 200px;
+    color: #25252c;
+    font: bold 16px "Arial";
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #fd8300;
+    border-radius: 26px;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    color: #fd8300;
+}
+
+.backfone {
+    padding: 20px 0 5px;
+    text-align: center;
+    background-image: url(../images/house.png);
+    background-size: cover;
+}
+
+.text {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text2 {
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Arial";
+}
+
+.price {
+    margin-top: 0px;
+    color: #fd8300;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.price span {
+    font-size: 24px;
+}
+
+sup {
+    font-size: 0.6em;
+}
+
+.story {
+    width: 677px;
+    height: 193px;
+    color: #666666;
+    font-size: 14px;
+    font-family: "Arial";
+}
+
+.story a {
+    color: #fd8300;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Arial";
+    text-decoration: underline;
+}
+
+h1 {
+    color: #24242b;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
+.paragraph {
+    width: 219px;
+    height: 44px;
+    color: #25252c;
+    font-size: 14px;
+    font-family: "Arial";
+    text-align: center;
+    background-color: #e4e4ec;
+}
+
+.paragraph li {
+    width: 219px;
+    height: 44px;
+    background-color: #e4e4ec;
+}
+
+.text3 {
+    width: 219px;
+    height: 45px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    background-color: #1f1f56;
+    border-radius: 3px;
+}
+
+.text4 {
+    width: 219px;
+    height: 44px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #fd8300;
+}
+
+.projects {}
+
+.projects h2 {
+    color: #24242b;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+}
+
+figure {
+    margin: 0;
+}
+
+.projects h3 {
+    color: #1f1f56;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.projects p {
+    color: #9999a6;
+    font-size: 13px;
+    font-family: "Arial";
+}
+
+.projects a:hover h3 {
+    text-decoration: underline;
+}
+
+.projects a {
+    text-decoration: none;
+}
+
+.ended {
+    box-sizing: border-box;
+    height: 205px;
+    background-color: #ededf5;
+}
+
+.ended p {
+    font-size: 14px;
+    color: #666666;
+    font-family: "Arial";
+}
+
+.ended a {
+    color: #fd8300;
+    font-size: 14px;
+    font-family: "Arial";
+}
