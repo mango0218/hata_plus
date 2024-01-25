@@ -1,8 +1,18 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     margin: 0;
 }
 
 ul {
+    margin: 0;
     padding-left: 0;
     list-style: none;
 }
@@ -11,7 +21,6 @@ ul {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 960px;
-    box-sizing: border-box;
 }
 
 .flex {
@@ -20,6 +29,7 @@ ul {
 }
 
 .top {
+    padding: 16px 0;
     background-color: #1f1f56;
 }
 
@@ -41,18 +51,74 @@ ul {
 
 .socials ul {
     display: flex;
+    align-items: center;
     column-gap: 25px;
 }
 
+.socials a {
+    display: block;
+    background: url(../images/hataplus_sprite.png) no-repeat;
+}
+
+a.fb {
+    width: 11px;
+    height: 19px;
+    background-position: 0 -20px;
+}
+
+a.fb:hover {
+    background-position: 0 0;
+}
+
+a.tw {
+    width: 18px;
+    height: 15px;
+    background-position: -12px -17px;
+}
+
+a.tw:hover {
+    background-position: -12px 0;
+}
+
+a.in {
+    width: 20px;
+    height: 20px;
+    background-position: -32px -20px;
+}
+
+a.in:hover {
+    background-position: -32px 0;
+}
+
 .contacts {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 30px 0;
 }
 
-.phones a {
-    margin-left: 11px;
+.contacts p,
+.ended p {
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 28px;
+}
+
+.column {
+    min-width: 219px;
+    width: 22.8%;
+
+    box-sizing: border-box;
+}
+
+.phones {
+    padding-left: 27px;
+}
+
+div.phones a {
+    line-height: 24px;
     color: #25252c;
     font-weight: bold;
     font-size: 18px;
@@ -60,22 +126,79 @@ ul {
     text-decoration: none;
 }
 
-.phones a:hover {
-    color: #666666;
+div.phones a:hover {
+    text-decoration: none;
+    color: #fd8300;
 }
 
-a.tel {
-    margin-left: 28px;
+.tel {
+    position: relative;
 }
 
-.mail a {
-    margin-left: 11px;
+.tel:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 17px;
+    height: 17px;
+    right: calc(100% + 10px);
+    top: 1px;
+    background-image: url(../images/hataplus_sprite.png);
+    background-repeat: no-repeat;
+    background-position: -53px 0;
+}
+
+.mail {
+    padding-left: 29px;
+}
+
+.letter {
+    position: relative;
+}
+
+.letter:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 13px;
+    width: 17px;
+    right: calc(100% + 10px);
+    top: 1px;
+    background-image: url(../images/hataplus_sprite.png);
+    background-repeat: no-repeat;
+    background-position: -72px 0;
+}
+
+.skype {
+    position: relative;
+}
+
+.skype::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 19px;
+    width: 18px;
+    right: calc(100% + 10px);
+    top: 1px;
+    background-image: url(../images/hataplus_sprite.png);
+    background-repeat: no-repeat;
+    background-position: -91px 0;
+}
+
+div.mail a {
+    line-height: 24px;
+    font-size: 16px;
     color: #25252c;
     font-family: "Arial";
 }
 
-.mail a:hover {
+div.mail a:hover {
     color: #fd8300;
+}
+
+.cta {
+    text-align: right;
 }
 
 .button a {
@@ -144,10 +267,11 @@ sup {
 }
 
 .story {
-    width: 677px;
-    height: 193px;
+    padding: 20px 0 30px 0;
+    max-width: 677px;
     color: #666666;
     font-size: 14px;
+    line-height: 24px;
     font-family: "Arial";
 }
 
@@ -167,24 +291,21 @@ h1 {
 }
 
 .paragraph {
-    width: 219px;
-    height: 44px;
     color: #25252c;
     font-size: 14px;
     font-family: "Arial";
-    text-align: center;
-    background-color: #e4e4ec;
+    text-align: justify;
+    border-radius: 3px;
 }
 
 .paragraph li {
-    width: 219px;
-    height: 44px;
     background-color: #e4e4ec;
 }
 
 .text3 {
-    width: 219px;
-    height: 45px;
+    margin: 35px 0 0 0;
+    padding-left: 15px;
+    padding-top: 5px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
@@ -192,16 +313,6 @@ h1 {
     background-color: #1f1f56;
     border-radius: 3px;
 }
-
-.text4 {
-    width: 219px;
-    height: 44px;
-    color: #ffffff;
-    text-align: center;
-    background-color: #fd8300;
-}
-
-.projects {}
 
 .projects h2 {
     color: #24242b;
@@ -214,7 +325,24 @@ figure {
     margin: 0;
 }
 
+.projects {
+    padding: 10px 0 40px 0;
+}
+
+.project {
+    position: relative;
+}
+
+.project a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
 .projects h3 {
+    margin: 7px 0 7px 0;
     color: #1f1f56;
     font-size: 14px;
     font-weight: bold;
@@ -222,33 +350,69 @@ figure {
 }
 
 .projects p {
+    margin: 5px 0;
     color: #9999a6;
     font-size: 13px;
     font-family: "Arial";
 }
 
-.projects a:hover h3 {
+.projects a:hover~h3 {
     text-decoration: underline;
 }
 
-.projects a {
+.asidemenu {
+    position: sticky;
+    top: 0;
+}
+
+.asidemenu a {
+    color: #25252c;
     text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.asidemenu2 a:hover {
+    background-color: #cecedd;
+    color: #666666;
+}
+
+.asidemenu>ul>li>a:hover {
+    color: #ffffff;
+    background-color: #fd8300;
+}
+
+.text3 {
+    height: 35px;
+}
+
+.asidemenu2 {
+    display: none;
+}
+
+.asideme:hover .asidemenu2 {
+    display: block;
 }
 
 .ended {
+    padding: 40px 0 30px 0;
     box-sizing: border-box;
-    height: 205px;
     background-color: #ededf5;
 }
 
-.ended p {
+.ended a {
+    line-height: 26px;
     font-size: 14px;
     color: #666666;
     font-family: "Arial";
+    text-decoration: none;
 }
 
-.ended a {
+.ended a:hover {
     color: #fd8300;
-    font-size: 14px;
-    font-family: "Arial";
+    text-decoration: underline;
+}
+
+.ended ul {
+    list-style: none;
 }
