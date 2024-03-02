@@ -28,6 +28,10 @@ ul {
     justify-content: space-between;
 }
 
+.shadow {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 .top {
     padding: 16px 0;
     background-color: #1f1f56;
@@ -41,6 +45,7 @@ ul {
 .menu a {
     color: #b1b1d2;
     text-decoration: none;
+    letter-spacing: 2px;
     font-size: 14px;
     font-family: "Arial";
 }
@@ -201,14 +206,6 @@ div.mail a:hover {
     text-align: right;
 }
 
-.button a {
-    color: #25252c;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: "Arial";
-    text-decoration: none;
-}
-
 .button {
     display: inline-block;
     padding: 15px;
@@ -220,10 +217,15 @@ div.mail a:hover {
     border: 2px solid #fd8300;
     border-radius: 26px;
     box-sizing: border-box;
+    transition: box-shadow 1s;
 }
 
 .button:hover {
-    color: #fd8300;
+    background-color: #fd8300;
+    color: #1f1f56;
+    box-shadow: rgba(31, 31, 86, .3) 6px 8px 9px,
+        inset -5px -5px 20px rgba(19, 19, 19, 0.855),
+        inset 5px 5px 20px rgba(25, 25, 25, 0.603);
 }
 
 .backfone {
@@ -266,16 +268,23 @@ sup {
     font-size: 0.6em;
 }
 
+main {
+    padding: 35px 0;
+}
+
+.rules {
+    margin: 25px 0;
+}
+
+
 .story {
-    padding: 20px 0 30px 0;
-    max-width: 677px;
     color: #666666;
     font-size: 14px;
     line-height: 24px;
     font-family: "Arial";
 }
 
-.story a {
+.more {
     color: #fd8300;
     font-size: 14px;
     font-weight: bold;
@@ -283,8 +292,15 @@ sup {
     text-decoration: underline;
 }
 
-h1 {
+.more:hover {
+    text-decoration: none;
     color: #24242b;
+}
+
+h1 {
+    margin-top: 0;
+    color: #24242b;
+    line-height: 1em;
     font-size: 30px;
     font-weight: 700;
     font-family: "Roboto Slab";
@@ -295,23 +311,94 @@ h1 {
     font-size: 14px;
     font-family: "Arial";
     text-align: justify;
-    border-radius: 3px;
 }
 
 .paragraph li {
     background-color: #e4e4ec;
 }
 
+.paragraph li:last-child {
+    border-radius: 0 0 3px 3px;
+}
+
 .text3 {
-    margin: 35px 0 0 0;
-    padding-left: 15px;
-    padding-top: 5px;
+    margin: 0;
+    padding: 13px 15px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 700;
     font-family: "Roboto Slab";
     background-color: #1f1f56;
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
+}
+
+table.prices  {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.prices tr:not(:first-child){
+    border-top: 1px solid #cdcddd;
+}
+
+.prices th:first-child{
+    border-radius: 3px 0 0 0;
+}
+
+.prices th:last-child{
+    border-radius: 0 3px 0 0;
+}
+
+.prices tr:last-child td:last-child{
+    border-radius: 0 0 3px 0;
+}
+
+.prices tr:last-child td:first-child{
+    border-radius: 0 0 0 3px;
+}
+
+.prices th:not(:last-child) {
+    text-align: left;
+}
+
+.prices th:last-child,
+.prices td:last-child {
+    text-align: right;
+}
+
+.prices thead {
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    background-color: #1f1f56;
+}
+
+.prices .name{
+    width: 29% ;
+}
+
+.prices tbody tr {
+    background-color: #e4e4ec;
+}
+
+.prices th{
+    padding: 15px 20px;
+}
+.prices td {
+    padding: 13px 20px 13px 20px;
+    font-size: 14px;
+    color: #666666;
+    font-family: "Arial";
+}
+
+.prices tbody tr:hover td {
+    color: #ffffff;
+    background-color: #fd8300;
+}
+
+hr {
+    margin: 30px 0 25px 0;
+    border: solid 1px #e4e4ec;
 }
 
 .projects h2 {
@@ -323,10 +410,6 @@ h1 {
 
 figure {
     margin: 0;
-}
-
-.projects {
-    padding: 10px 0 40px 0;
 }
 
 .project {
@@ -365,6 +448,10 @@ figure {
     top: 0;
 }
 
+.asidemenu>ul>li~li {
+    border-top: 1px solid #cdcddd;
+}
+
 .asidemenu a {
     color: #25252c;
     text-decoration: none;
@@ -382,22 +469,25 @@ figure {
     background-color: #fd8300;
 }
 
-.text3 {
-    height: 35px;
+.asidemenu>ul>li:last-child>a {
+    border-radius: 0 0 3px 3px;
 }
 
 .asidemenu2 {
     display: none;
 }
 
-.asideme:hover .asidemenu2 {
+.asidemenu>ul>li:hover ul {
     display: block;
 }
 
 .ended {
-    padding: 40px 0 30px 0;
     box-sizing: border-box;
     background-color: #ededf5;
+}
+
+.fotertop {
+    padding: 40px 0 30px 0;
 }
 
 .ended a {
@@ -415,4 +505,15 @@ figure {
 
 .ended ul {
     list-style: none;
+}
+
+.copyright {
+    margin: 0;
+    padding: 15px 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #9999a6;
+    font-family: "Arial";
+    text-align: center;
+    background-color: #dcdce6;
 }
