@@ -122,7 +122,8 @@ a.in:hover {
     padding-left: 27px;
 }
 
-div.phones a {
+div.phones a,
+.phone {
     line-height: 24px;
     color: #25252c;
     font-weight: bold;
@@ -131,7 +132,8 @@ div.phones a {
     text-decoration: none;
 }
 
-div.phones a:hover {
+div.phones a:hover,
+.phone:hover {
     text-decoration: none;
     color: #fd8300;
 }
@@ -191,14 +193,16 @@ div.phones a:hover {
     background-position: -91px 0;
 }
 
-div.mail a {
+div.mail a,
+.lette {
     line-height: 24px;
     font-size: 16px;
     color: #25252c;
     font-family: "Arial";
 }
 
-div.mail a:hover {
+div.mail a:hover,
+.lette:hover {
     color: #fd8300;
 }
 
@@ -228,11 +232,19 @@ div.mail a:hover {
         inset 5px 5px 20px rgba(25, 25, 25, 0.603);
 }
 
+
 .backfone {
     padding: 20px 0 5px;
     text-align: center;
     background-image: url(../images/house.png);
     background-size: cover;
+}
+
+.h2 {
+    font-size: 14px;
+    color: #24242b;
+    font-weight: 700;
+    font-family: "Roboto Slab";
 }
 
 .text {
@@ -306,6 +318,46 @@ h1 {
     font-family: "Roboto Slab";
 }
 
+.contaktu p {
+    margin: 10px 0;
+}
+
+.mappa {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mappa iframe {
+    margin-top: -60px;
+    width: 100%;
+    height: 360px;
+    border: none;
+}
+
+.feedback {
+    width: 100%;
+}
+
+.feedback .h2 {
+    margin-top: 0;
+}
+
+.tablemaps {
+    width: 100%;
+}
+
+.tablemaps input,
+.tablemaps textarea {
+    width: 100%;
+    font-size: 13px;
+    color: #9999a6;
+    font-style: italic;
+    font-family: "Arial";
+    box-sizing: border-box;
+}
+
+
 .paragraph {
     color: #25252c;
     font-size: 14px;
@@ -332,28 +384,28 @@ h1 {
     border-radius: 3px 3px 0 0;
 }
 
-table.prices  {
+table.prices {
     border-collapse: collapse;
     width: 100%;
 }
 
-.prices tr:not(:first-child){
+.prices tr:not(:first-child) {
     border-top: 1px solid #cdcddd;
 }
 
-.prices th:first-child{
+.prices th:first-child {
     border-radius: 3px 0 0 0;
 }
 
-.prices th:last-child{
+.prices th:last-child {
     border-radius: 0 3px 0 0;
 }
 
-.prices tr:last-child td:last-child{
+.prices tr:last-child td:last-child {
     border-radius: 0 0 3px 0;
 }
 
-.prices tr:last-child td:first-child{
+.prices tr:last-child td:first-child {
     border-radius: 0 0 0 3px;
 }
 
@@ -373,17 +425,18 @@ table.prices  {
     background-color: #1f1f56;
 }
 
-.prices .name{
-    width: 29% ;
+.prices .name {
+    width: 29%;
 }
 
 .prices tbody tr {
     background-color: #e4e4ec;
 }
 
-.prices th{
+.prices th {
     padding: 15px 20px;
 }
+
 .prices td {
     padding: 13px 20px 13px 20px;
     font-size: 14px;
@@ -401,7 +454,8 @@ hr {
     border: solid 1px #e4e4ec;
 }
 
-.projects h2 {
+.projects h2,
+.maps_h1 {
     color: #24242b;
     font-size: 24px;
     font-weight: 700;
@@ -479,6 +533,86 @@ figure {
 
 .asidemenu>ul>li:hover ul {
     display: block;
+}
+
+.tablewrap {
+    margin: 0 -10px;
+}
+
+.tablemaps {
+    border-spacing: 10px;
+}
+
+.masage,
+.namephone {
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #c5c5d4;
+}
+
+textarea {
+    padding: 15px 15px;
+    height: 105px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #c5c5d4;
+}
+
+.sent {
+    margin-right: 30px;
+    width: 140px;
+    height: 41px;
+    border-radius: 21px;
+    border: none;
+    cursor: pointer;
+    background-color: #fd8300;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Arial";
+    text-align: center;
+}
+
+.sent:hover {
+    background: #1f1f56;
+}
+
+.feedback label {
+    font-size: 13px;
+    color: #666666;
+    font-family: "Arial";
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+    max-height: 200px;
+
+}
+
+.checkbox {
+    appearance: none;
+    position: relative;
+    margin-bottom: -1px;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #c5c5d4;
+}
+
+.checkbox:checked::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 4px;
+    width: 4px;
+    height: 7px;
+    border-bottom: 2px solid #1f1f56;
+    border-right: 2px solid #1f1f56;
+    transform: rotate(45deg);
 }
 
 .ended {
